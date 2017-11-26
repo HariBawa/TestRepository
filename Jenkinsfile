@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Initialize') {
       steps {
-        echo 'This is minimal pipeline'
+        sh 'echo "This is initialize step"'
       }
     }
     stage('Build') {
