@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'node1'
-    }
-    
-  }
+  agent any
   stages {
     stage('Initialize') {
       steps {
@@ -26,5 +21,9 @@ pipeline {
         echo 'This is test stage'
       }
     }
+  }
+  environment {
+    author = 'Hari Bawa'
+    project = 'Test Project'
   }
 }
