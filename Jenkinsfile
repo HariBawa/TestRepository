@@ -18,14 +18,14 @@ pipeline {
             echo 'Automated Test on Dev Environment'
           }
         }
-        stage('Dev Test Step 2') {
+        stage('Dev Test 2') {
           steps {
-            echo 'Step 2 Testing'
+            echo 'Additional test 2'
           }
         }
-        stage('Dev Test Step 3') {
+        stage('Dev Test 3') {
           steps {
-            echo 'Dev 3 Step Testing'
+            echo 'Additional Test 3'
           }
         }
       }
@@ -33,6 +33,8 @@ pipeline {
     stage('Dev Deploy ') {
       steps {
         echo 'Deliver to Dev Environment'
+        echo 'Deploy Step 2'
+        echo 'Deploy Step 3'
       }
     }
   }
