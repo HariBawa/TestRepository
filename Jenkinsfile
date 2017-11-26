@@ -12,8 +12,22 @@ pipeline {
       }
     }
     stage('Dev Test') {
-      steps {
-        echo 'Automated Test on Dev Environment'
+      parallel {
+        stage('Dev Test') {
+          steps {
+            echo 'Automated Test on Dev Environment'
+          }
+        }
+        stage('Dev Test Step 2') {
+          steps {
+            echo 'Step 2 Testing'
+          }
+        }
+        stage('Dev Test Step 3') {
+          steps {
+            echo 'Dev 3 Step Testing'
+          }
+        }
       }
     }
     stage('Dev Deploy ') {
