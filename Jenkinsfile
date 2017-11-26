@@ -11,14 +11,14 @@ pipeline {
         echo 'This is Build Stage'
       }
     }
-    stage('Dev Delivery') {
+    stage('Dev Test') {
       steps {
-        echo 'This is delivery to Dev Environment'
+        echo 'Automated Test on Dev Environment'
       }
     }
-    stage('Dev Test ') {
+    stage('Dev Deploy ') {
       steps {
-        echo 'This is test stage'
+        echo 'Deliver to Dev Environment'
       }
     }
   }
